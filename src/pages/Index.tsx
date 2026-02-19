@@ -18,13 +18,13 @@ const Index = () => {
   }, []);
 
   const products = [
-    { name: "6 × 500ML Still", price: "R51", size: "small" as const, image: bottle500ml },
-    { name: "12 × 500ML Still", price: "R102", size: "medium" as const, image: bottle500ml },
-    { name: "24 × 500ML Still", price: "R204", size: "large" as const, image: bottle500ml },
-    { name: "1 × 5L Still", price: "R25", size: "medium" as const, image: bottle5l },
-    { name: "2 × 5L Still", price: "R45", size: "small" as const, image: bottle5l },
-    { name: "500ML Sparkling", price: "R10", size: "medium" as const, image: bottleSparkling },
-  ];
+  { name: "6 × 500ML Still", price: "R51", size: "small" as const, image: bottle500ml },
+  { name: "12 × 500ML Still", price: "R102", size: "medium" as const, image: bottle500ml },
+  { name: "24 × 500ML Still", price: "R204", size: "large" as const, image: bottle500ml },
+  { name: "1 × 5L Still", price: "R25", size: "medium" as const, image: bottle5l },
+  { name: "2 × 5L Still", price: "R45", size: "small" as const, image: bottle5l },
+  { name: "500ML Sparkling", price: "R10", size: "medium" as const, image: bottleSparkling }];
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -41,16 +41,16 @@ const Index = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative aspect-[4/5] bg-background rounded-2xl flex items-center justify-center"
-            >
+              className="relative aspect-[4/5] bg-background rounded-2xl flex items-center justify-center">
+
               {/* Featured bottle image */}
               <motion.img
                 src={bottle500ml}
                 alt="METSI 012 Water Bottle"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="w-auto h-3/4 object-contain drop-shadow-2xl"
-              />
+                className="w-auto h-3/4 object-contain drop-shadow-2xl" />
+
               
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-xl" />
@@ -63,8 +63,8 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-sm uppercase tracking-[0.3em] text-primary mb-4 block font-medium"
-              >
+                className="text-sm uppercase tracking-[0.3em] text-primary mb-4 block font-medium">
+
                 Premium Water
               </motion.span>
 
@@ -72,9 +72,9 @@ const Index = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-5xl md:text-7xl font-bold mb-6 leading-[0.95] tracking-tight text-foreground"
-              >
-                Metsi
+                className="text-5xl md:text-7xl font-bold mb-6 leading-[0.95] tracking-tight text-foreground">
+                Metsi'
+012
                 <br />
                 <span className="text-primary">012</span>
               </motion.h1>
@@ -83,8 +83,8 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="text-lg text-muted-foreground font-light mb-8 max-w-md leading-relaxed"
-              >
+                className="text-lg text-muted-foreground font-light mb-8 max-w-md leading-relaxed">
+
                 'A Monate Metsi 012 — Stay Hydrated and Drink Metsi. Pure, refreshing water from the heart of Pretoria.
               </motion.p>
 
@@ -92,19 +92,19 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="flex flex-wrap gap-4"
-              >
-                <Link 
-                  to="/order" 
-                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-[10px] font-medium hover:bg-primary/90 transition-colors"
-                >
+                className="flex flex-wrap gap-4">
+
+                <Link
+                  to="/order"
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-[10px] font-medium hover:bg-primary/90 transition-colors">
+
                   Order Now
                   <ArrowRight size={18} />
                 </Link>
-                <Link 
-                  to="/products" 
-                  className="inline-flex items-center gap-2 border-2 border-foreground text-foreground px-8 py-4 rounded-[10px] font-medium hover:bg-foreground hover:text-background transition-colors"
-                >
+                <Link
+                  to="/products"
+                  className="inline-flex items-center gap-2 border-2 border-foreground text-foreground px-8 py-4 rounded-[10px] font-medium hover:bg-foreground hover:text-background transition-colors">
+
                   View Products
                 </Link>
               </motion.div>
@@ -114,8 +114,8 @@ const Index = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
-                className="mt-16 pt-8 border-t border-border grid grid-cols-2 gap-8"
-              >
+                className="mt-16 pt-8 border-t border-border grid grid-cols-2 gap-8">
+
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-primary mb-2 font-medium">Location</p>
                   <p className="text-sm text-foreground">Pretoria, South Africa</p>
@@ -144,8 +144,8 @@ const Index = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-sm uppercase tracking-[0.3em] text-primary mb-4 block font-medium"
-              >
+                className="text-sm uppercase tracking-[0.3em] text-primary mb-4 block font-medium">
+
                 Our Products
               </motion.span>
               <motion.h2
@@ -153,8 +153,8 @@ const Index = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-4xl md:text-6xl font-bold tracking-tight"
-              >
+                className="text-4xl md:text-6xl font-bold tracking-tight">
+
                 Still & Sparkling
               </motion.h2>
             </div>
@@ -163,12 +163,12 @@ const Index = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <Link 
-                to="/products" 
-                className="hidden md:inline-flex items-center gap-2 text-primary font-medium hover:underline"
-              >
+              viewport={{ once: true }}>
+
+              <Link
+                to="/products"
+                className="hidden md:inline-flex items-center gap-2 text-primary font-medium hover:underline">
+
                 View All
                 <ArrowRight size={16} />
               </Link>
@@ -182,31 +182,31 @@ const Index = () => {
 
           {/* Product Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 relative z-10">
-            {products.slice(0, 3).map((product, index) => (
-              <ProductCard
-                key={product.name}
-                name={product.name}
-                price={product.price}
-                size={product.size}
-                image={product.image}
-                index={index}
-              />
-            ))}
+            {products.slice(0, 3).map((product, index) =>
+            <ProductCard
+              key={product.name}
+              name={product.name}
+              price={product.price}
+              size={product.size}
+              image={product.image}
+              index={index} />
+
+            )}
           </div>
 
           {/* Second Row */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mt-8 relative z-10">
             <div className="hidden md:block" />
-            {products.slice(3, 5).map((product, index) => (
-              <ProductCard
-                key={product.name}
-                name={product.name}
-                price={product.price}
-                size={product.size}
-                image={product.image}
-                index={index + 3}
-              />
-            ))}
+            {products.slice(3, 5).map((product, index) =>
+            <ProductCard
+              key={product.name}
+              name={product.name}
+              price={product.price}
+              size={product.size}
+              image={product.image}
+              index={index + 3} />
+
+            )}
           </div>
 
           {/* Sparkling Section */}
@@ -216,8 +216,8 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-2xl md:text-3xl font-bold tracking-tight mb-12"
-            >
+              className="text-2xl md:text-3xl font-bold tracking-tight mb-12">
+
               Sparkling & Ice
             </motion.h3>
 
@@ -227,14 +227,14 @@ const Index = () => {
                 price="R10"
                 size="small"
                 image={bottleSparkling}
-                index={0}
-              />
+                index={0} />
+
               <ProductCard
                 name="Ice Bag 2KG"
                 price="R22"
                 size="small"
-                index={1}
-              />
+                index={1} />
+
             </div>
           </div>
 
@@ -244,8 +244,8 @@ const Index = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center text-muted-foreground text-sm mt-16 italic"
-          >
+            className="text-center text-muted-foreground text-sm mt-16 italic">
+
             Delivery charges may apply!!
           </motion.p>
         </div>
@@ -259,8 +259,8 @@ const Index = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-8xl font-bold tracking-tighter mb-8"
-          >
+            className="text-5xl md:text-8xl font-bold tracking-tighter mb-8">
+
             PURE WATER
           </motion.h2>
 
@@ -269,8 +269,8 @@ const Index = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-lg opacity-80 font-light mb-12 max-w-md mx-auto"
-          >
+            className="text-lg opacity-80 font-light mb-12 max-w-md mx-auto">
+
             Straight from Pretoria, delivered to your door.
           </motion.p>
 
@@ -278,12 +278,12 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            <Link 
-              to="/order" 
-              className="inline-flex items-center gap-2 bg-background text-foreground px-8 py-4 rounded-[10px] font-medium hover:opacity-90 transition-opacity"
-            >
+            viewport={{ once: true }}>
+
+            <Link
+              to="/order"
+              className="inline-flex items-center gap-2 bg-background text-foreground px-8 py-4 rounded-[10px] font-medium hover:opacity-90 transition-opacity">
+
               Order Now
               <ArrowRight size={18} />
             </Link>
@@ -298,8 +298,8 @@ const Index = () => {
 
       <FloatingWhatsApp />
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;
