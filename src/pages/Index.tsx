@@ -74,7 +74,6 @@ const Index = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-5xl md:text-7xl font-bold mb-6 leading-[0.95] tracking-tight text-foreground">
                 Metsi'
-012
                 <br />
                 <span className="text-primary">012</span>
               </motion.h1>
